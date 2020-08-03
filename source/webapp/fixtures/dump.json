@@ -1,0 +1,97 @@
+[
+{
+  "model": "webapp.product",
+  "pk": 1,
+  "fields": {
+    "name": "Banana",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi accusantium maiores necessitatibus ratione vel, aliquam dicta vero illum consectetur hic, ut non. Dolores velit illum, alias eum magnam non voluptates, atque sunt dolorum quos eveniet, ad, quo minima ipsa commodi.",
+    "category": "food",
+    "amount": 5000,
+    "price": "150.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 2,
+  "fields": {
+    "name": "\"HotWilee\"",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi accusantium maiores necessitatibus ratione vel, aliquam dicta vero illum consectetur hic, ut non. Dolores velit illum, alias eum magnam non voluptates, atque sunt dolorum quos eveniet, ad, quo minima ipsa commodi.",
+    "category": "toys",
+    "amount": 187,
+    "price": "300.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 3,
+  "fields": {
+    "name": "beko",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi accusantium maiores necessitatibus ratione vel, aliquam dicta vero illum consectetur hic, ut non. Dolores velit illum, alias eum magnam non voluptates, atque sunt dolorum quos eveniet, ad, quo minima ipsa commodi.",
+    "category": "appliances",
+    "amount": 90,
+    "price": "20000.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 4,
+  "fields": {
+    "name": "Mr.Muscule",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi accusantium maiores necessitatibus ratione vel, aliquam dicta vero illum consectetur hic, ut non. Dolores velit illum, alias eum magnam non voluptates, atque sunt dolorum quos eveniet, ad, quo minima ipsa commodi.",
+    "category": "household",
+    "amount": 3000,
+    "price": "600.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 5,
+  "fields": {
+    "name": "none",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi accusantium maiores necessitatibus ratione vel, aliquam dicta vero illum consectetur hic, ut non. Dolores velit illum, alias eum magnam non voluptates, atque sunt dolorum quos eveniet, ad, quo minima ipsa commodi.",
+    "category": "other",
+    "amount": 10000,
+    "price": "789.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 6,
+  "fields": {
+    "name": "nanosword",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi accusantium maiores necessitatibus ratione vel, aliquam dicta vero illum consectetur hic, ut non. Dolores velit illum, alias eum magnam non voluptates, atque sunt dolorum quos eveniet, ad, quo minima ipsa commodi.",
+    "category": "other",
+    "amount": 232,
+    "price": "232.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 7,
+  "fields": {
+    "name": "led lump",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi accusantium maiores necessitatibus ratione vel, aliquam dicta vero illum consectetur hic, ut non. Dolores velit illum, alias eum magnam non voluptates, atque sunt dolorum quos eveniet, ad, quo minima ipsa commodi.",
+    "category": "other",
+    "amount": 3000,
+    "price": "5000.00"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$M3ulnZygSDXt$lbi4ZXoCMhty+Sy/9wzNnhrKDQRV9kkCOj79IGj7Rxg=",
+    "last_login": "2020-08-03T07:32:38.874Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@mail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-08-03T07:30:58.757Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
