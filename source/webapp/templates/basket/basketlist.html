@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Basket List{% endblock %}
+
+
+{% block content %}
+    <h1>Basket List</h1>
+
+    {% for basket in baskets %}
+            <span style="text-transform: capitalize; font-size: 30px">{{ basket.product.name }} /{{ basket.count }}  </span><br>
+            <p><a style="text-decoration: none;text-transform: uppercase;color:
+                #6a7dff" href="{% url "basket_delete" basket.pk %}">delete </a></p>
+
+
+
+    {% endfor %}
+    <hr>
+    <p>Итого:</p>
+
+{% endblock %}

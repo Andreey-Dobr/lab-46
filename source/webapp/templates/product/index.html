@@ -6,32 +6,40 @@
 {% block menu %}
     {% for field in category %}
 
-           Поиск покатегории: <a  href="#">{{ field }} </a>
+        Поиск покатегории: <a href="#">{{ field }} </a>
 
     {% endfor %}
 {% endblock %}
 
 {% block content %}
-    <h1>Title</h1>
+    <h1>Product list</h1>
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
 
     {% for product in products %}
-        {% if product.amount > 1 %}
 
 
 
-                 <span style="text-transform: capitalize; font-size: 30px">{{ product.name }}   </span><br>
-                {{ product.price }}    {{ product.category }}
-                <p><a style="text-decoration: none;text-transform: uppercase;color:
+
+            <span style="text-transform: capitalize; font-size: 30px">{{ product.name }} {{ product.amount }}  </span><br>
+            {{ product.price }}    {{ product.get_category_display }}
+            <p><a style="text-decoration: none;text-transform: uppercase;color:
                 #6a7dff" href="{% url "product_view" product.pk %}">more </a>|
-                    <a style="text-decoration: none;text-transform: uppercase;color:
+                <a style="text-decoration: none;text-transform: uppercase;color:
                 #6a7dff" href="{% url "update" product.pk %}">update </a>|
                 <a style="text-decoration: none;text-transform: uppercase;color:
-                #6a7dff" href="{% url "del" product.pk %}">Delete </a></p>
-<hr>
-        {% endif %}
+                #6a7dff" href="{% url "del" product.pk %}">Delete </a>|
+            <a style="text-decoration: none;text-transform: uppercase;color:
+                #6a7dff" href="{% url "basket_add" product.pk %}">add in basket</a></p>
+            <hr>
+
 
 
 
 
     {% endfor %}
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
 {% endblock %}

@@ -1,18 +1,25 @@
 from django import forms
-from django.forms import widgets
-from django.core.validators import MinValueValidator
-from .models import CATEGORY_CHOICES, DEFAULT_CATEGORY
+from .models import CATEGORY_CHOICES, Product, Basket
 
 
+class ProductForm(forms.ModelForm):
+    class Meta:
+        model = Product
+        fields = [ 'name', 'description', 'category', 'amount', 'price']
+        widgets = {'description': forms.Textarea}
 
-class ProductForm(forms.Form):
-    name = forms.CharField(max_length=100, required=True, label='название')
-    description = forms.CharField(max_length=3000, required=True, label='Подробное описание',
-                                  widget=widgets.Textarea)
-    category = forms.ChoiceField(choices=CATEGORY_CHOICES, initial=DEFAULT_CATEGORY, label='статус')
-    amount = forms.IntegerField(validators=[MinValueValidator(0)], label='количество')
-    price = forms.DecimalField(max_digits=7, decimal_places=2, validators=[MinValueValidator(0)], label='цена')
+
+class BasketForm(forms.ModelForm):
+    class Meta:
+        model = Basket
+        fields = ['product','count']
+
+
 
 
 class ProductCategory(forms.Form):
     category = forms.ChoiceField(choices=CATEGORY_CHOICES, label='статус')
+
+
+class SimpleSearchForm(forms.Form):
+    search = forms.CharField(max_length=100, required=False, label="Найти")

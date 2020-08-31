@@ -3,14 +3,14 @@
 {% block title %}Delete{% endblock %}
 
 {% block content %}
-    <h1>Вы уверены, что хотите продукт "{{ article.name }}"?</h1>
+    <h1>Вы уверены, что хотите продукт "{{ product.name }}"?</h1>
 
-    <form action="{% url "del" article.pk %}" method="post">
+    <form action="{% url "del" product.pk %}" method="post">
         {% csrf_token %}
         <p><input type="submit" value="Да"></p>
 
         <button type="button"><a href="{% url 'index'  %}" style="text-decoration: none">Нет</a></button>
     </form>
     <h3>Содержимое отзыва: </h3>
-    <p>{{ article.name }}</p>
+    <p>{{ product.name }}</p>
 {% endblock %}

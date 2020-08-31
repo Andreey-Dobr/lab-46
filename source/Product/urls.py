@@ -16,16 +16,23 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from webapp.views import index_view, product_view, create_product, product_update_view, delete_product, category_view
+from webapp.views import \
+    ProductListView, ProductView, ProjectCreate, Product_Update_View, Delete_Product, AddBasket
+from webapp.views.basket import BasketListView, Basket_Delete
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index_view, name='index'),
-    path('<int:pk>/', product_view, name='product_view'),
-    path('add/', create_product, name='create_product'),
-    path('<int:pk>/edit/', product_update_view, name='update'),
-    path('<int:pk>/del/', delete_product, name='del'),
-    path('products/<str:category>/', index_view, name='category')
+
+    path('', ProductListView.as_view(), name='index'),
+    path('product/<int:pk>/', ProductView.as_view(), name='product_view'),
+    path('product/add/', ProjectCreate.as_view(), name='create_product'),
+    path('product/<int:pk>/edit/', Product_Update_View.as_view(), name='update'),
+    path('product/<int:pk>/del/', Delete_Product.as_view(), name='del'),
+
+
+    path('basket/', BasketListView.as_view(), name='basket'),
+    path('product/<int:pk>/basket/', AddBasket.as_view(), name='basket_add'),
+    path('<int:pk>/basket/', Basket_Delete.as_view(), name='basket_delete'),
 
 ]
 
