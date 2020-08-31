@@ -32,3 +32,11 @@ class Basket(models.Model):
     product = models.ForeignKey('webapp.Product', related_name='product', on_delete=models.PROTECT
                                ,verbose_name='продукт')
     count = models.IntegerField(verbose_name='количество', default=1)
+
+
+class Order(models.Model):
+    products = models.ManyToManyField('webapp.Product', related_name='продукты')
+    name = models.CharField(null=False, max_length=50, verbose_name="имя")
+    phone = models.CharField(null=False, max_length=10, verbose_name="телефон")
+    adres = models.CharField(null=False,max_length=100, verbose_name='адрес')
+    data = models.DateTimeField(auto_now=True, verbose_name='Время создания')

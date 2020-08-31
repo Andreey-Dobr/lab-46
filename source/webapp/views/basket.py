@@ -2,14 +2,20 @@ from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse
 from django.views.generic import ListView, DeleteView, UpdateView, CreateView
 
-from webapp.forms import BasketForm
+from webapp.forms import BasketForm, OrderForms
 from webapp.models import Basket, Product
+
+
+
 
 
 class BasketListView(ListView):
     template_name = 'basket/basketlist.html'
     context_object_name = 'baskets'
     model = Basket
+    form_class = OrderForms
+
+
 
 class AddBasket(CreateView):
     template_name = 'basket/add_basket.html'
@@ -23,7 +29,7 @@ class AddBasket(CreateView):
         basket.save()
 
         return redirect('index')
-    
+
 
 
 class Basket_Delete(DeleteView):

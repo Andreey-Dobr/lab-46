@@ -16,5 +16,10 @@
     {% endfor %}
     <hr>
     <p>Итого:</p>
+    <hr>
+    <h1>Checkout</h1>
+    {{ order.name }}
+
+     {% include 'partial/form.html' with action_url=action_url form_method='post' button_text='Update' %}
 
 {% endblock %}

@@ -23,17 +23,6 @@
 },
 {
   "model": "webapp.product",
-  "pk": 3,
-  "fields": {
-    "name": "beko",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi accusantium maiores necessitatibus ratione vel, aliquam dicta vero illum consectetur hic, ut non. Dolores velit illum, alias eum magnam non voluptates, atque sunt dolorum quos eveniet, ad, quo minima ipsa commodi.",
-    "category": "appliances",
-    "amount": 90,
-    "price": "20000.00"
-  }
-},
-{
-  "model": "webapp.product",
   "pk": 4,
   "fields": {
     "name": "Mr.Muscule",
@@ -45,23 +34,12 @@
 },
 {
   "model": "webapp.product",
-  "pk": 5,
-  "fields": {
-    "name": "none",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi accusantium maiores necessitatibus ratione vel, aliquam dicta vero illum consectetur hic, ut non. Dolores velit illum, alias eum magnam non voluptates, atque sunt dolorum quos eveniet, ad, quo minima ipsa commodi.",
-    "category": "other",
-    "amount": 10000,
-    "price": "789.00"
-  }
-},
-{
-  "model": "webapp.product",
   "pk": 6,
   "fields": {
     "name": "nanosword",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi accusantium maiores necessitatibus ratione vel, aliquam dicta vero illum consectetur hic, ut non. Dolores velit illum, alias eum magnam non voluptates, atque sunt dolorum quos eveniet, ad, quo minima ipsa commodi.",
     "category": "other",
-    "amount": 232,
+    "amount": 1,
     "price": "232.00"
   }
 },
@@ -74,6 +52,113 @@
     "category": "other",
     "amount": 3000,
     "price": "5000.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 13,
+  "fields": {
+    "name": "\u0431\u0430\u043d\u0430\u043d\u044b",
+    "description": "\u0431\u0430\u043d\u0430\u043d\u044b\u0439",
+    "category": "food",
+    "amount": 5000,
+    "price": "234.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 14,
+  "fields": {
+    "name": "\u0418\u043c\u0431\u0438\u0440\u044c",
+    "description": "\u0418\u043c\u0431\u0438\u0440\u044c",
+    "category": "food",
+    "amount": 5000,
+    "price": "122.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 15,
+  "fields": {
+    "name": "\u041c\u043e\u0440\u043a\u043e\u0432\u044c",
+    "description": "\u041c\u043e\u0440\u043a\u043e\u0432\u044c \u043a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0430\u044f",
+    "category": "food",
+    "amount": 5000,
+    "price": "122.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 16,
+  "fields": {
+    "name": "\u0426\u0432\u0435\u0442\u043d\u0430\u044f \u043a\u0430\u043f\u0443\u0441\u0442\u0430",
+    "description": "\u0426\u0432\u0435\u0442\u043d\u0430\u044f \u043a\u0430\u043f\u0443\u0441\u0442\u0430",
+    "category": "household",
+    "amount": 5000,
+    "price": "1223.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 17,
+  "fields": {
+    "name": "\u041e\u0433\u0443\u0440\u0446\u044b",
+    "description": "\u043e\u044b\u0438\u0447\u043e\u0440\u043f\u044b\u0441",
+    "category": "household",
+    "amount": 5000,
+    "price": "123.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 18,
+  "fields": {
+    "name": "\u0427\u0435\u0441\u043d\u043e\u043a",
+    "description": "\u0443\u0447\u043e\u0446\u0438\u0441\u043d\u043f\u0446\u043d",
+    "category": "food",
+    "amount": 10000,
+    "price": "1443.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 19,
+  "fields": {
+    "name": "\u041a\u0443\u0434\u0440\u044f\u0432\u0430\u044f \u043a\u0430\u043f\u0443\u0441\u0442\u0430",
+    "description": "\u041a\u0443\u0434\u0440\u044f\u0432\u0430\u044f \u043a\u0430\u043f\u0443\u0441\u0442\u0430 (\u043a\u0435\u0439\u043b).",
+    "category": "food",
+    "amount": 5000,
+    "price": "1121.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 20,
+  "fields": {
+    "name": "\u041b\u0443\u043a",
+    "description": "\u041b\u0443\u043a",
+    "category": "household",
+    "amount": 5000,
+    "price": "12221.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 21,
+  "fields": {
+    "name": "\u0422\u043e\u043c\u0430\u0442\u044b",
+    "description": "\u0422\u043e\u043c\u0430\u0442\u044b \u043a\u0440\u0430\u0441\u043d\u044b\u0435",
+    "category": "food",
+    "amount": 5000,
+    "price": "123.00"
+  }
+},
+{
+  "model": "webapp.basket",
+  "pk": 2,
+  "fields": {
+    "product": 1,
+    "count": 12
   }
 },
 {
