@@ -1,4 +1,5 @@
-from django.http import HttpResponseNotAllowed
+from django.core.serializers import serialize
+from django.http import HttpResponseNotAllowed, HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
@@ -18,6 +19,16 @@ class ProductListView(ListView):
 
     def get_queryset(self):
         return super().get_queryset().filter(amount__gt=0)
+
+def product_list_view(request, *args, **kwargs):
+    if request.method == 'GET':
+        products = Product.objects.all()
+        products_data = serialize('json', products)
+        response = HttpResponse(products_data)
+        response['Content-Type'] = 'application/json'
+        return response
+
+
 
 class ProductView(DetailView):
     template_name = 'product/product_view.html'

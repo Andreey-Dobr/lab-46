@@ -18,10 +18,6 @@
     {% endif %}
 
     {% for product in products %}
-
-
-
-
             <span style="text-transform: capitalize; font-size: 30px">{{ product.name }} {{ product.amount }}  </span><br>
             {{ product.price }}    {{ product.get_category_display }}
             <p><a style="text-decoration: none;text-transform: uppercase;color:
@@ -30,8 +26,7 @@
                 #6a7dff" href="{% url "update" product.pk %}">update </a>|
                 <a style="text-decoration: none;text-transform: uppercase;color:
                 #6a7dff" href="{% url "del" product.pk %}">Delete </a>|
-            <a style="text-decoration: none;text-transform: uppercase;color:
-                #6a7dff" href="{% url "basket_add" product.pk %}">add in basket</a></p>
+            {% include 'partial/cart_add_form.html' %}
             <hr>
 
 

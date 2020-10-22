@@ -14,10 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from webapp.views import \
-    ProductListView, ProductView, ProjectCreate, Product_Update_View, Delete_Product, AddBasket
+    ProductListView, ProductView, ProjectCreate, Product_Update_View, Delete_Product, AddBasket, product_list_view
 from webapp.views.basket import BasketListView, Basket_Delete
 
 urlpatterns = [
@@ -29,11 +29,15 @@ urlpatterns = [
     path('product/<int:pk>/edit/', Product_Update_View.as_view(), name='update'),
     path('product/<int:pk>/del/', Delete_Product.as_view(), name='del'),
 
+    path('product/add/<int:pk>/add-to-cart/', AddBasket.as_view(), name='product_add_to_basket'),
 
     path('basket/', BasketListView.as_view(), name='basket'),
     path('product/<int:pk>/basket/', AddBasket.as_view(), name='basket_add'),
     path('<int:pk>/basket/', Basket_Delete.as_view(), name='basket_delete'),
 
+    path('products/', product_list_view, name='index_api'),
+
+    path('api/v1/', include('api_v1.urls'))
 ]
 
 

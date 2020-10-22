@@ -12,12 +12,14 @@ class ProductForm(forms.ModelForm):
 class BasketForm(forms.ModelForm):
     class Meta:
         model = Basket
-        fields = ['product','count']
+        fields = ['count']
+
+
 
 class OrderForms(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ['name','phone','adres']
+        exclude = ['products']
 
 
 
